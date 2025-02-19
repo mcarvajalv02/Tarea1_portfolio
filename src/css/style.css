@@ -1,0 +1,72 @@
+/* Animaciones para el Hero */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Desplazamiento desde abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Posición final */
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px); /* Desplazamiento desde la izquierda */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Posición final */
+  }
+}
+
+/* Clases de animación inicial */
+.animate-hero-image {
+  opacity: 0; /* Inicialmente invisible */
+  animation: fadeInRight 1s ease forwards; /* Aparece desde la izquierda */
+}
+
+.animate-hero-content {
+  opacity: 0; /* Inicialmente invisible */
+  animation: fadeInUp 1s ease forwards 0.5s; /* Aparece desde abajo con retraso */
+}
+
+/* Clases para animaciones de scroll */
+.hidden-element {
+  opacity: 0; /* Elemento invisible */
+  filter: blur(5px); /* Desenfoque inicial */
+  transform: translateX(-100%); /* Elemento desplazado hacia la izquierda */
+  transition: all 1s; /* Transición suave */
+}
+
+.show-element {
+  opacity: 1; /* Elemento visible */
+  filter: blur(0); /* Sin desenfoque */
+  transform: translateX(0); /* Elemento en su posición final */
+}
+
+/* Variación para elementos que entran desde la derecha */
+.hidden-element-right {
+  opacity: 0; /* Elemento invisible */
+  filter: blur(5px); /* Desenfoque inicial */
+  transform: translateX(100%); /* Elemento desplazado hacia la derecha */
+  transition: all 1s; /* Transición suave */
+}
+
+/* Añade un pequeño delay a cada tecnología */
+.tech-item {
+  transition-delay: calc(var(--order) * 100ms); /* Retraso basado en el orden de cada tecnología */
+}
+
+/* Animación para las cards de proyectos */
+.project-card {
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(50px); /* Desplazamiento desde abajo */
+  transition: all 0.6s ease; /* Transición suave */
+}
+
+.project-card.show-element {
+  opacity: 1; /* Elemento visible */
+  transform: translateY(0); /* Posición final */
+}

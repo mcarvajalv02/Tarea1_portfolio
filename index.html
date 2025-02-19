@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio de Miguel Carvajal</title>
+
+    <!-- Fuente personalizada -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="src/js/script.js"></script>
+  </head>
+  <body class="bg-gray-900 text-gray-200 font-['Roboto']">
+     <!-- Header -->
+     <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+      <div
+        class="container mx-auto flex justify-between items-center px-6 py-4"
+      >
+        <div class="text-2xl font-bold text-teal-400 hover:text-teal-300 transition-colors duration-300">Miguel Carvajal</div>
+        <!-- Botón de menú hamburguesa (solo en móviles) -->
+        <button
+          id="menu-toggle"
+          class="block md:hidden text-gray-200 focus:outline-none hover:text-teal-400 transition-colors duration-300"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Menú normal (desktop) -->
+        <nav id="menu" class="hidden md:block">
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="#hero"
+                class="hover:text-teal-400 transition duration-300 relative after:absolute after:w-0 after:h-0.5 after:bg-teal-400 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300"
+              >
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a
+                href="#tecnologias"
+                class="hover:text-teal-400 transition duration-300 relative after:absolute after:w-0 after:h-0.5 after:bg-teal-400 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300"
+              >
+                Tecnologías
+              </a>
+            </li>
+            <li>
+              <a
+                href="#proyectos"
+                class="hover:text-teal-400 transition duration-300 relative after:absolute after:w-0 after:h-0.5 after:bg-teal-400 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300"
+              >
+                Proyectos
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contacto"
+                class="hover:text-teal-400 transition duration-300 relative after:absolute after:w-0 after:h-0.5 after:bg-teal-400 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300"
+              >
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+      <!-- Menú móvil horizontal -->
+      <div id="mobile-menu" class="hidden bg-gray-900 md:hidden transition-all duration-300 overflow-hidden max-h-0">
+        <div class="container mx-auto px-4 py-3">
+          <ul class="flex justify-between items-center border-t border-gray-700 pt-3">
+            <li class="text-center">
+              <a 
+                href="#hero" 
+                class="block p-2 rounded-lg hover:bg-gray-800 hover:text-teal-400 transition duration-300 text-sm"
+              >
+                <svg class="w-5 h-5 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                Inicio
+              </a>
+            </li>
+            <li class="text-center">
+              <a 
+                href="#tecnologias" 
+                class="block p-2 rounded-lg hover:bg-gray-800 hover:text-teal-400 transition duration-300 text-sm"
+              >
+                <svg class="w-5 h-5 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                </svg>
+                Tecnologías
+              </a>
+            </li>
+            <li class="text-center">
+              <a 
+                href="#proyectos" 
+                class="block p-2 rounded-lg hover:bg-gray-800 hover:text-teal-400 transition duration-300 text-sm"
+              >
+                <svg class="w-5 h-5 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                </svg>
+                Proyectos
+              </a>
+            </li>
+            <li class="text-center">
+              <a 
+                href="#contacto" 
+                class="block p-2 rounded-lg hover:bg-gray-800 hover:text-teal-400 transition duration-300 text-sm"
+              >
+                <svg class="w-5 h-5 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section
+      id="hero"
+      class="bg-gradient-to-r from-gray-800 via-gray-900 to-black py-65"
+    >
+      <div
+        class="container mx-auto flex flex-col lg:flex-row items-center justify-center px-6 space-y-6 lg:space-y-0 lg:space-x-12"
+      >
+        <img
+          src="./src/images/yo.jpg"
+          alt="Mi persona"
+          class="w-60 h-60 rounded-full object-cover shadow-lg border-4 border-teal-400"
+        />
+
+        <!-- Contenido -->
+        <div class="text-center lg:text-left">
+          <h1 class="text-5xl md:text-6xl font-bold text-teal-400 mb-4">
+            Miguel Carvajal
+          </h1>
+          <p class="text-2xl md:text-3xl mb-6 text-gray-300">
+            Estudiante de DAW y Desarrollador Web
+          </p>
+          <p class="max-w-2xl text-lg text-gray-300">
+            Bienvenido a mi portfolio profesional. Aquí encontrarás una
+            selección de mis proyectos que demuestran mi pasión por el
+            desarrollo web y la innovación.
+          </p>
+
+          <!-- Enlaces a redes -->
+          <div class="flex justify-center lg:justify-start space-x-6 mt-6">
+            <a
+              href="https://github.com/mcarvajalv02"
+              target="_blank"
+              class="transition transform hover:scale-110"
+            >
+              <img
+                src="./src/images/github.png"
+                alt="GitHub"
+                class="w-14 h-14 rounded-full transition-all ease-out duration-300 hover:bg-[#8432ad] p-1"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/miguel-carvajal-vel%C3%A1zquez-9688192a2/"
+              target="_blank"
+              class="relative inline-block transition-transform hover:scale-110"
+            >
+              <img
+                src="./src/images/linkedin1.png"
+                alt="LinkedIn"
+                class="w-14 h-14 rounded-lg transition-all ease-out duration-300 hover:bg-[#0077b5] p-1"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tecnologias" class="py-16 bg-gray-800">
+      <div class="container mx-auto text-center px-6">
+        <h2 class="text-3xl font-bold text-teal-400 mb-8">Tecnologías</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
+          <img
+            src="./src/images/html.png"
+            alt="HTML"
+            class="w-20 h-20 mx-auto"
+            title="HTML"
+          />
+          <img
+            src="./src/images/css.png"
+            alt="CSS"
+            class="w-20 h-20 mx-auto"
+            title="CSS"
+          />
+          <img
+            src="./src/images/javascript.png"
+            alt="JavaScript"
+            class="w-20 h-20 mx-auto"
+            title="JavaScript"
+          />
+          <img
+            src="./src/images/react.png"
+            alt="React"
+            class="w-20 h-20 mx-auto"
+            title="React"
+          />
+          <img
+            src="./src/images/tailwind.png"
+            alt="Tailwind"
+            class="w-20 h-20 mx-auto"
+            title="Tailwind"
+          />
+          <img
+            src="./src/images/phaser.png"
+            alt="Phaser"
+            class="w-20 h-20 mx-auto"
+            title="Phaser"
+          />
+          <img
+            src="./src/images/java.webp"
+            alt="Java"
+            class="w-20 h-20 mx-auto"
+            title="Java"
+          />
+          <img
+            src="./src/images/astro.png"
+            alt="Astro"
+            class="w-20 h-20 mx-auto rounded-3xl"
+            title="Astro"
+          />
+          <img
+            src="./src/images/bootstrap.webp"
+            alt="Bootstrap"
+            class="w-20 h-20 mx-auto"
+            title="Bootstrap"
+          />
+          <img
+            src="./src/images/figma2.webp"
+            alt="Figma"
+            class="w-20 h-20 mx-auto"
+            title="Figma"
+          />
+          <img
+            src="./src/images/mysql.webp"
+            alt="MySQL"
+            class="w-20 h-20 mx-auto"
+            title="MySQL"
+          />
+          <img
+            src="./src/images/hibernate1.png"
+            alt="Hibernate"
+            class="w-20 h-20 mx-auto rounded-3xl"
+            title="Hibernate"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Sección de Proyectos -->
+    <main id="proyectos" class="container mx-auto px-6 py-10">
+      <h2 class="text-3xl font-bold text-teal-400 mb-8 text-center">
+        Proyectos
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Proyecto: Web de Emprendimiento -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
+        >
+          <img
+            src="./src/images/web-emprendimiento.png"
+            alt="Web de Emprendimiento"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-teal-400">
+              Web de Emprendimiento
+            </h3>
+            <div class="flex space-x-2 mb-2">
+              <img
+                src="./src/images/astro.png"
+                alt="Astro"
+                class="w-9 h-9 rounded-lg"
+                title="Astro"
+              />
+              <img
+                src="./src/images/tailwind.png"
+                alt="Tailwind"
+                class="w-10 h-10"
+                title="Tailwind"
+              />
+            </div>
+            <p class="text-gray-300 text-sm">
+              Clon de la web de emprendimiento con diseño moderno y animaciones
+              sutiles. Desplegada en Vercel.
+            </p>
+            <!-- Botones Código y Ejecutable -->
+            <div class="flex justify-around mt-4">
+              <a
+                href="https://github.com/mcarvajalv02/WebEmprendimiento"
+                target="_blank"
+                class="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-500 transition duration-300"
+              >
+                Código
+              </a>
+              <a
+                href="https://web-emprendimiento.vercel.app/"
+                target="_blank"
+                class="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-500 transition duration-300"
+              >
+                Ejecutable
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto: App de Gasolineras -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
+        >
+          <img
+            src="./src/images/app-gasolineras.png"
+            alt="App de Gasolineras"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-teal-400">
+              App de Gasolineras
+            </h3>
+            <div class="flex space-x-2 mb-2">
+              <img
+                src="./src/images/javascript.png"
+                alt="JavaScript"
+                class="w-10 h-10"
+                title="JavaScript"
+              />
+              <img
+                src="./src/images/css.png"
+                alt="CSS3"
+                class="w-10 h-10"
+                title="CSS3"
+              />
+              <img
+                src="./src/images/html.png"
+                alt="HTML"
+                class="w-11 h-11"
+                title="HTML"
+              />
+            </div>
+            <p class="text-gray-300 text-sm">
+              Aplicación completa para gasolineras, con funcionalidades para
+              buscar ubicaciones y obtener detalles de servicios.
+            </p>
+            <!-- Botones Código y Ejecutable -->
+            <div class="flex justify-around mt-4">
+              <a
+                href="https://github.com/mcarvajalv02/GasolineraTailwind"
+                target="_blank"
+                class="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-500 transition duration-300"
+              >
+                Código
+              </a>
+              <a
+                href="https://gasolinera-tailwind--six.vercel.app/"
+                target="_blank"
+                class="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-500 transition duration-300"
+              >
+                Ejecutable
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto: Videojuego en Phaser -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
+        >
+          <img
+            src="./src/images/videojuego-phaser.png"
+            alt="Videojuego en Phaser"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-teal-400">
+              Videojuego en Phaser
+            </h3>
+            <div class="flex space-x-2 mb-2">
+              <img
+                src="./src/images/phaser.png"
+                alt="Phaser"
+                class="w-10 h-10"
+                title="Phaser"
+              />
+              <img
+                src="./src/images/javascript.png"
+                alt="JavaScript"
+                class="w-10 h-10"
+                title="JavaScript"
+              />
+            </div>
+            <p class="text-gray-300 text-sm">
+              FlappyBird desarrollado con Phaser con los mismos controles que
+              FlappyBird original e igual de divertido.
+            </p>
+            <!-- Botones Código y Ejecutable -->
+            <div class="flex justify-around mt-4">
+              <a
+                href="https://github.com/mcarvajalv02/Flappy_Bird"
+                target="_blank"
+                class="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-500 transition duration-300"
+              >
+                Código
+              </a>
+              <a
+                href="https://mcarvajalv02.itch.io/flappy-bird"
+                target="_blank"
+                class="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-500 transition duration-300"
+              >
+                Ejecutable
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto: Clon de Spotify -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
+        >
+          <img
+            src="./src/images/clonSpotify.png"
+            alt="Clon de Spotify"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-teal-400">
+              Clon de Spotify
+            </h3>
+            <div class="flex space-x-2 mb-2">
+              <img
+                src="./src/images/react.png"
+                alt="React"
+                class="w-10 h-10"
+                title="React"
+              />
+              <img
+                src="./src/images/tailwind.png"
+                alt="Tailwind"
+                class="w-10 h-10"
+                title="Tailwind"
+              />
+              <img
+                src="./src/images/html.png"
+                alt="HTML"
+                class="w-10 h-10"
+                title="HTML"
+              />
+            </div>
+            <p class="text-gray-300 text-sm">
+              Clon de Spotify modificado para incluir varias canciones
+              pre-cargadas. Interfaz intuitiva y responsive.
+            </p>
+            <!-- Botones Código y Ejecutable -->
+            <div class="flex justify-around mt-4">
+              <a
+                href="https://github.com/mcarvajalv02/Proyecto_Spotify_"
+                target="_blank"
+                class="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-500 transition duration-300"
+              >
+                Código
+              </a>
+              <a
+                href="https://mcarvajalv02.github.io/Proyecto_Spotify_/"
+                target="_blank"
+                class="bg-teal-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-teal-500 transition duration-300"
+              >
+                Ejecutable
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="bg-gray-800 py-8">
+      <div class="container mx-auto text-center px-6">
+        <p class="text-gray-400">
+          &copy; 2025 Miguel Carvajal. Todos los derechos reservados.
+        </p>
+        <p class="text-gray-400 mt-2">
+          Contacto:
+          <a
+            href="mailto:miguel@example.com"
+            class="text-teal-400 hover:underline transition duration-300"
+          >
+            miguelcarvajalvelazquez@gmail.com
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
