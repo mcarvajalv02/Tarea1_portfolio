@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(card);
   });
 
-  // ---- Funcionalidad del menú hamburguesa ----
+  // ---- Funcionalidad del menú  ----
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.style.maxHeight = '0';
       setTimeout(() => {
         mobileMenu.classList.add('hidden');
-      }, 300); // Corresponde a la duración de la transición
+      }, 300); 
     }
   });
 });
